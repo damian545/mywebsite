@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>MY WEBSITE 2021</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="images/Damian Tapp Portrate.jpg" />
+          <img src="images/myname.png" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="images/arttools.jpg" class="damian" />
+        <div id="circle">
+          <div class="feature one">
+            <div>
+              <h1>Portfolio Page</h1>
+              <p>
+                This is my portfolio page recreated from a University activity.
+              </p>
+            </div>
+          </div>
+          <div class="feature two">
+            <a href="https://damian545.github.io/milestone-5/" target="_blank"
+              >Milestone</a
+            >
+
+            <p>This is my milestone recreated from a University activity.</p>
+          </div>
+          <div class="feature three">
+            <h1>Golf Project</h1>
+            <p>This a project I took on myself for a golf course.</p>
+          </div>
+          <div class="feature four">
+            <h1>Radelaide.wow</h1>
+            <p>
+              This is my last project at University all created in React.js.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="images/arrowup.png" id="upBtn" />
+        <h3>Activities and Projects</h3>
+        <img src="images/arrowdown.png" id="downBtn" />
+      </div>
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+  </body>
+</html>

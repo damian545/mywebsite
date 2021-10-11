@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style2.css" />
+    <title>About Me</title>
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="images/arttools.jpg" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="aboutme.html">ABOUT ME</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="images/Damian Tapp Portrate.jpg" class="damian" />
+        <div id="circle">
+          <div class="feature one">
+            <div>
+              <h1>Starting off</h1>
+              <p>
+              Back in early 2020, I decided to learn coding and to 
+              create web sites.
+              </p>
+            </div>
+          </div>
+          <div class="feature two">
+            <h1>My reason why</h1>
+
+            <p>
+                Because I was unhappy with my current job and 
+                my artistic abilities were going to waste where I 
+                work.
+            </p>
+          </div>
+          <div class="feature three">
+            <h1>How learning coding went</h1>
+            <p>
+                I learnt quickly how to code, I slowly figured out 
+                you can do anything. As long as you were commited.
+            </p>
+          </div>
+          <div class="feature four">
+            <h1>The future</h1>
+            <p>
+              I want to keep learning new things, toying with old ideas 
+              and hopefully creating a new job for myself.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="images/arrowup.png" id="upBtn" />
+        <h3>Toggle up or down about me</h3>
+        <img src="images/arrowdown.png" id="downBtn" />
+      </div>
+    </div>
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotateValue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+      downBtn.onclick = function () {
+        rotateSum = rotateValue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotateValue = rotateSum;
+      };
+    </script>
+    </div>
+  </body>
+</html>
